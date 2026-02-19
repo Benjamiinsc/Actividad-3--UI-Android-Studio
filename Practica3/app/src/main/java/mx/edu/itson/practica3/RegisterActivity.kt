@@ -14,17 +14,16 @@ class RegisterActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_register)
 
-        val button: Button = findViewById(R.id.sign_in_button)
-        
-        button.setOnClickListener { 
-            var intent: Intent = Intent(this, MenuActivity::class.java)
-            startActivity(intent)
-        }
-        
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val button: Button = findViewById(R.id.btn_sign_in)
+        button.setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
         }
     }
 }

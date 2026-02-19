@@ -1,105 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MenuActivity">
 
     <ImageView
+        android:id="@+id/imageViewLogoMenu"
         android:layout_width="241dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/grupo2"
         android:layout_marginTop="40dp"
-        android:layout_gravity="center" />
+        android:adjustViewBounds="true"
+        android:src="@drawable/grupo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/tvMenuTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:fontFamily="sans-serif-light"
         android:text="@string/our_menu"
         android:textAllCaps="true"
-        android:layout_gravity="center_horizontal"
+        android:textColor="#BDBDBD"
         android:textSize="20sp"
-        android:layout_marginTop="20dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogoMenu" />
 
     <GridLayout
+        android:id="@+id/menuGrid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
         android:columnCount="2"
-        android:layout_marginTop="20dp"
-        android:paddingHorizontal="50dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMenuTitle">
 
-    <Button
-        android:id="@+id/button_cold_drinks"
-        android:layout_width="0dp"
-        android:layout_columnWeight="1"
-        android:layout_gravity="fill_horizontal"
-        android:layout_marginRight="@dimen/menu_buttons_margin"
-        android:background="@drawable/first_gradient"
-        android:paddingVertical="@dimen/menu_buttons_paddings"
-        android:text="@string/cold_drinks"
-        android:textColor="@color/white"
-        android:textSize="@dimen/menu_buttons_text" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_antojitos"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/menu_buttons_margin"
+            android:background="@color/rojo"
+            android:padding="@dimen/menu_buttons_paddings"
+            android:text="@string/antojitos"
+            android:textColor="@color/white"
+            android:textSize="@dimen/menu_buttons_text" />
 
-    <Button
-        android:id="@+id/button_hot_drinks"
-        android:layout_width="0dp"
-        android:layout_columnWeight="1"
-        android:layout_gravity="fill_horizontal"
-        android:layout_marginRight="@dimen/menu_buttons_margin"
-        android:background="@drawable/first_gradient"
-        android:paddingVertical="@dimen/menu_buttons_paddings"
-        android:text="@string/hot_drinks"
-        android:textColor="@color/white"
-        android:textSize="@dimen/menu_buttons_text" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_especialidades"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/menu_buttons_margin"
+            android:background="@color/rojo"
+            android:padding="@dimen/menu_buttons_paddings"
+            android:text="@string/especialidades"
+            android:textColor="@color/white"
+            android:textSize="@dimen/menu_buttons_text" />
 
-    <Button
-        android:layout_width="0dp"
-        android:layout_columnWeight="1"
-        android:layout_gravity="fill_horizontal"
-        android:layout_marginRight="@dimen/menu_buttons_margin"
-        android:background="@drawable/first_gradient"
-        android:paddingVertical="@dimen/menu_buttons_paddings"
-        android:text="@string/combos"
-        android:textColor="@color/white"
-        android:textSize="@dimen/menu_buttons_text" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_combinaciones"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/menu_buttons_margin"
+            android:background="@color/rojo"
+            android:padding="@dimen/menu_buttons_paddings"
+            android:text="@string/combinaciones"
+            android:textColor="@color/white"
+            android:textSize="@dimen/menu_buttons_text" />
 
-    <Button
-        android:layout_width="0dp"
-        android:layout_columnWeight="1"
-        android:layout_gravity="fill_horizontal"
-        android:layout_marginRight="@dimen/menu_buttons_margin"
-        android:background="@drawable/first_gradient"
-        android:paddingVertical="@dimen/menu_buttons_paddings"
-        android:text="@string/sweets"
-        android:textColor="@color/white"
-        android:textSize="@dimen/menu_buttons_text" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_tortas"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/menu_buttons_margin"
+            android:background="@color/rojo"
+            android:padding="@dimen/menu_buttons_paddings"
+            android:text="@string/tortas"
+            android:textColor="@color/white"
+            android:textSize="@dimen/menu_buttons_text" />
 
-    <Button
-        android:layout_width="0dp"
-        android:layout_columnWeight="1"
-        android:layout_gravity="fill_horizontal"
-        android:layout_marginRight="@dimen/menu_buttons_margin"
-        android:background="@drawable/first_gradient"
-        android:paddingVertical="@dimen/menu_buttons_paddings"
-        android:text="@string/salties"
-        android:textColor="@color/white"
-        android:textSize="@dimen/menu_buttons_text" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_sopas"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/menu_buttons_margin"
+            android:background="@color/rojo"
+            android:padding="@dimen/menu_buttons_paddings"
+            android:text="@string/sopas"
+            android:textColor="@color/white"
+            android:textSize="@dimen/menu_buttons_text" />
 
-    <Button
-        android:layout_width="0dp"
-        android:layout_columnWeight="1"
-        android:layout_gravity="fill_horizontal"
-        android:layout_marginRight="@dimen/menu_buttons_margin"
-        android:background="@drawable/first_gradient"
-        android:paddingVertical="@dimen/menu_buttons_paddings"
-        android:text="@string/custom"
-        android:textColor="@color/white"
-        android:textSize="@dimen/menu_buttons_text" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_drinks"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/menu_buttons_margin"
+            android:background="@color/rojo"
+            android:padding="@dimen/menu_buttons_paddings"
+            android:text="@string/drinks"
+            android:textColor="@color/white"
+            android:textSize="@dimen/menu_buttons_text" />
 
-</GridLayout>
+    </GridLayout>
 
-    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
